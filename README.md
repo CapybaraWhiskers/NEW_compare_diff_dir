@@ -1,32 +1,32 @@
-# Directory Comparison Tool
+# ディレクトリ比較ツール
 
-This repository contains a Python tool to compare two directories using Git's diff capabilities with text conversion for Office documents and PDFs.
+このリポジトリには、OfficeドキュメントやPDFのテキスト変換に対応したGitのdiff機能を利用して、2つのディレクトリを比較するPythonツールが含まれています。
 
-## Requirements
+## 必要要件
 
 - Python 3
 - Git
-- Python packages: `docx2txt`, `openpyxl`, `xlrd`, `python-docx`, `python-pptx`, `PyPDF2`
+- Pythonパッケージ: `docx2txt`, `openpyxl`, `xlrd`, `python-docx`, `python-pptx`, `PyPDF2`
 
-Install dependencies with:
+依存パッケージのインストール:
 
 ```bash
 pip install python-docx openpyxl xlrd python-pptx PyPDF2 docx2txt
 ```
 
-## Usage
+## 使い方
 
 ```
 python compare_dirs.py DIR1 DIR2 [--json]
 ```
 
-The tool outputs changes grouped by status:
+ツールは、変更内容をステータスごとにグループ化して出力します:
 
-1. Added
-2. Removed
-3. Renamed
-4. Modified
-5. RenamedAndModified
-6. Unchanged
+1. 追加 (Added)
+2. 削除 (Removed)
+3. 名前変更 (Renamed)
+4. 修正 (Modified)
+5. 名前変更および修正 (RenamedAndModified)
+6. 変更なし (Unchanged)
 
-For changed files, unified diff hunks are displayed. Use `--json` to get JSON output.
+変更されたファイルについては、unified diff形式の差分が表示されます。`--json`オプションを付けるとJSON形式で出力されます。
